@@ -73,18 +73,18 @@ export default function GymPage() {
         <div className="grid md:grid-cols-3 gap-0 border border-white/20">
           <PlanColumn
             title="Standard"
-            price="₹49"
+            price="₹700"
             features={["Full Gym Access", "Locker Room", "Free Weights Zone"]}
           />
           <PlanColumn
             title="Elite"
-            price="₹89"
+            price="₹1200"
             features={["Full Gym Access", "Group Classes", "Recovery Zone", "Monthly Assessment"]}
             isPopular
           />
           <PlanColumn
             title="Beast"
-            price="₹149"
+            price="₹2000"
             features={["Everything in Elite", "Personal Training (4x/mo)", "Nutrition Plan", "Private Locker"]}
           />
         </div>
@@ -177,26 +177,25 @@ export default function GymPage() {
 
 function PlanColumn({ title, price, features, isPopular }: { title: string, price: string, features: string[], isPopular?: boolean }) {
   return (
-    <div className={`p-10 flex flex-col ₹{isPopular ? 'bg-red-600 relative' : 'bg-transparent border-r border-white/10 last:border-r-0'}`}>
+    <div className={`p-10 flex flex-col ${isPopular ? 'bg-red-600 relative shadow-2xl scale-105' : 'bg-transparent border-r border-white/10 last:border-r-0'} transition-all duration-300`}
+    >
       {isPopular && (
         <span className="absolute top-0 right-0 bg-white text-black font-bold uppercase tracking-widest text-xs px-4 py-1">
           Most Popular
         </span>
       )}
-      <h3 className="font-oswald text-3xl uppercase tracking-tight mb-2">{title}</h3>
-      <div className="font-oswald text-6xl tracking-tighter mb-8">{price}<span className="text-2xl text-white/60 tracking-normal">/mo</span></div>
+      <h3 className="font-oswald text-3xl uppercase tracking-tight mb-2 text-white">{title}</h3>
+      <div className="font-oswald text-6xl tracking-tighter mb-8 text-white">{price}<span className="text-2xl text-white/60 tracking-normal">/mo</span></div>
 
       <ul className="space-y-4 mb-12 flex-1">
         {features.map((feat, i) => (
           <li key={i} className="flex items-center gap-3 font-medium text-white/80">
-            <Check className={`w-5 h-5 ₹{isPopular ? 'text-white' : 'text-red-600'}`} /> {feat}
+            <Check className={`w-5 h-5 ${isPopular ? 'text-white' : 'text-red-600'}`} /> {feat}
           </li>
         ))}
       </ul>
 
-      <Button className={`w-full h-14 font-bold uppercase tracking-widest ₹{isPopular ? 'bg-black text-white hover:bg-neutral-900' : 'bg-white text-black hover:bg-neutral-200'}`}>
-        Select Plan
-      </Button>
+      <Button className={`w-full h-14 font-bold uppercase tracking-widest ${isPopular ? 'bg-black text-white hover:bg-neutral-900' : 'bg-white text-black hover:bg-neutral-200'}`} onClick={() => { document.getElementById('join')?.scrollIntoView({ behavior: 'smooth' }); }}>Select Plan</Button>
     </div>
   )
 }
