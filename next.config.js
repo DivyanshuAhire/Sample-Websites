@@ -1,9 +1,7 @@
-// next.config.js
-const isDev = process.env.NODE_ENV === "development";
-
-module.exports = {
+/** @type {import('next').NextConfig} */
+const nextConfig = {
   output: "export",
-  basePath: isDev ? "" : "/Sample-Websites",
-  assetPrefix: isDev ? "" : "/Sample-Websites/",
   trailingSlash: true,
 };
+
+module.exports = nextConfig;
