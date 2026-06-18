@@ -1,0 +1,37 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-inter);
+  --font-playfair: var(--font-playfair);
+  --font-oswald: var(--font-oswald);
+  --font-outfit: var(--font-outfit);
+  --font-roboto: var(--font-roboto);
+  --font-montserrat: var(--font-montserrat);
+}
+
+@layer base {
+  :root {
+    --background: #ffffff;
+    --foreground: #171717;
+  }
+
+  html,
+  body {
+    scroll-behavior: smooth;
+    background-color: var(--background);
+    color: var(--foreground);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Prevent overscroll bounce on mobile */
+  body {
+    overscroll-behavior-y: none;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
