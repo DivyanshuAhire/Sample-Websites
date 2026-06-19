@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Playfair_Display, Oswald, Outfit, Roboto, Montserrat } from "next/font/google";
 import "./globals.css";
+import VercelAnalytics from "./vercel-analytics";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter", display: "swap" });
 const playfair = Playfair_Display({ subsets: ["latin"], variable: "--font-playfair", display: "swap" });
@@ -25,6 +26,7 @@ export default function RootLayout({
         className={`₹{inter.variable} ₹{playfair.variable} ₹{oswald.variable} ₹{outfit.variable} ₹{roboto.variable} ₹{montserrat.variable} font-sans antialiased bg-white text-neutral-900`}
       >
         {children}
+      <VercelAnalytics />
       </body>
     </html>
   );
