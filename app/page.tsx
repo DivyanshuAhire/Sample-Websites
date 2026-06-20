@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowRight, UtensilsCrossed, Dumbbell, Stethoscope, Building2, BookOpen } from "lucide-react";
+import { ArrowRight, UtensilsCrossed, Dumbbell, Stethoscope, Building2, BookOpen, HardHat } from "lucide-react";
 
 export default function Home() {
   return (
@@ -69,6 +69,15 @@ export default function Home() {
             hoverBg="hover:bg-[#fbd34d]"
             hoverText="group-hover:text-[#000000]"
             hoverIcon="group-hover:text-[#000000]"
+          />
+          <ProjectCard
+            title="Vanguard Construct"
+            industry="Real Estate Builder"
+            href="/builder"
+            icon={<HardHat className="w-8 h-8" />}
+            hoverBg="hover:bg-[#18181b]"
+            hoverText="group-hover:text-white"
+            hoverIcon="group-hover:text-[#d4d4d8]"
           />
         </div>
       </main>
