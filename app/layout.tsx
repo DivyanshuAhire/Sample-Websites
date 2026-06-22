@@ -25,7 +25,7 @@ export default function RootLayout({
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </head>
-      <body className={`${inter.variable} ${playfair.variable} ${oswald.variable} ${outfit.variable} ${roboto.variable} ${montserrat.variable} font-sans antialiased bg-white text-neutral-900`} style={{ overflowX: 'hidden' }}>
+      <body className={`${inter.variable} ${playfair.variable} ${oswald.variable} ${outfit.variable} ${roboto.variable} ${montserrat.variable} font-sans antialiased bg-white text-neutral-900`} style={{ overflowX: 'hidden', overflowY: 'auto' }}>
         {children}
         <VercelAnalytics />
       </body>
