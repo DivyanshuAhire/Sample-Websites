@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowRight, UtensilsCrossed, Dumbbell, Stethoscope, Building2, BookOpen, HardHat } from "lucide-react";
+import { ArrowRight, UtensilsCrossed, Dumbbell, Stethoscope, Building2, BookOpen, HardHat, Calculator } from "lucide-react";
 
 export default function Home() {
   return (
@@ -78,6 +78,15 @@ export default function Home() {
             hoverBg="hover:bg-[#18181b]"
             hoverText="group-hover:text-white"
             hoverIcon="group-hover:text-[#d4d4d8]"
+          />
+          <ProjectCard
+            title="Apex & Co."
+            industry="CA & Financial Services"
+            href="/ca-firm"
+            icon={<Calculator className="w-8 h-8" />}
+            hoverBg="hover:bg-[#0f172a]"
+            hoverText="group-hover:text-white"
+            hoverIcon="group-hover:text-[#94a3b8]"
           />
         </div>
       </main>
